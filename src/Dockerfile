@@ -2,9 +2,9 @@ FROM tmvdl/android:app
 
 WORKDIR /app
 
-RUN cordova create banco com.brtmvdl.banco banco
+RUN cordova create app com.brtmvdl.banco banco
 
-WORKDIR /app/banco
+WORKDIR /app/app
 
 COPY app/html www
 
