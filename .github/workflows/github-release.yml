@@ -9,7 +9,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  release:
+
+  release:    
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
