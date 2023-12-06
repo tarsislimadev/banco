@@ -5,23 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Banco</title>
-  <script type="importmap">
-    {
-      "imports": {
-        "@brtmvdl/frontend": "./libs/@brtmvdl/frontend/src/index.js"
-      }
-    }
-  </script>
 </head>
 
 <body>
-  <div id="app"></div>
   <script type="module">
-    import { HTML } from '@brtmvdl/frontend'
-    import { Page } from './index.js'
+    const logged = false;
 
-    HTML.fromId('app').append(new Page())
-    HTML.fromElement(document.body).setStyle('margin', '0rem')
+    ;; (window.location = (logged ? './pages/dashboard/index.html' : './pages/login/index.html'))
   </script>
 </body>
 
