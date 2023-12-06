@@ -2,13 +2,21 @@ version: '3'
 
 services:
 
-  www:
+  nodejs:
+    image: 'tmvdl/projects:nodejs'
+    build: 
+      context: './src/app'
+      dockerfile: Dockerfile.nodejs
+    volumes:
+      - './src/app/html:/usr/share/nginx/html'
+
+  app:
     image: 'tmvdl/projects:app'
     build: './src/app'
     volumes:
       - './src/app/html:/usr/share/nginx/html'
     ports:
-      -  '80:80'
+      -  '8080:80'
 
   github-release:
     image: 'github-release'
